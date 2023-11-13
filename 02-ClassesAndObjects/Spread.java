@@ -3,7 +3,8 @@ public class Spread {
     double sell;
 
     double spreadCalculator(){
-        return sell - buy;
+        double sp = sell - buy;
+        return sp;
     }
 
     public static void main (String[] args){
@@ -12,6 +13,7 @@ public class Spread {
         spr1.sell = 4.6250;
         System.out.println("Bank buys EUR: " + spr1.buy);
         System.out.println("Bank sells EUR: " + spr1.sell);
-        System.out.format("%.4f%n", spr1.spreadCalculator());
+        //System.out.format("%.4f%n", spr1.spreadCalculator());
+        System.out.printf("Spread: " + "%5.4f%n", spr1.spreadCalculator());
     }
 }
