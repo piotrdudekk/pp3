@@ -23,4 +23,10 @@ public class Temperature {
     static double fahrenheitToKelvin(float fahrenheit){
         return ((fahrenheit-32)/1.8 + 273.15);
     }
+
+    public static void main (String[] args){
+        System.out.println("25 Celcius degrees are: " + celciusToKelvin(25) + " Kelvin degrees and " + 
+                            celciusToFahrenheit(25) + " Fahrenheit degrees.");
+                            
+    }
 }

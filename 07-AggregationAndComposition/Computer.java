@@ -5,56 +5,58 @@ public class Computer {
     private int storage;
     private Processor processor;
 
-    public Computer(boolean isOn, int ram, String os, int storage){
-        processor = new Processor("Ryzen", "5", 5600, 6);
+    public Computer(boolean isOn, int ram, String os, int storage, String make, String model, float frequency,
+            int cacheSize) {
+        this.processor = new Processor(make, model, frequency, cacheSize);
         this.isOn = isOn;
         this.ram = ram;
         this.os = os;
         this.storage = storage;
     }
 
-    public Processor getProcessor(){
+    public Processor getProcessor() {
         return processor;
     }
 
-    public int getRam(){
+    public int getRam() {
         return ram;
     }
 
-    public String getOs(){
+    public String getOs() {
         return os;
     }
 
-    public int getStorage(){
+    public int getStorage() {
         return storage;
     }
 
-    public void turnOn(){
+    public void turnOn() {
         isOn = true;
     }
 
-    public void turnOff(){
+    public void turnOff() {
         isOn = false;
     }
 
-    public  String showStatus(){
-        if (isOn == true){
+    public String showStatus() {
+        if (isOn == true) {
             return "Computer is on.";
-        }
-        else {
+        } else {
             return "Computer is off.";
         }
     }
 
-    public String toString(){
-        return "Computer RAM: " + getRam() + "\n" + "Computer OS: " + getOs() + "\n" + "Computer storage: " + getStorage();
+    public String toString() {
+        return "Computer RAM: " + getRam() + "\n" + "Computer OS: " + getOs() + "\n" + "Computer storage: "
+                + getStorage() + "\n Processor: " + getProcessor().toString();
     }
 
-    public static void main (String[] args){
-        Computer computer = new Computer(true, 16, "Windows", 256);
-        Processor processor = computer.getProcessor();
+    public static void main(String[] args) {
+        // Processor ryzen = new Processor("Ryzen", "GHX", 500, 6);
+        Computer computer = new Computer(true, 16, "Windows", 256, "Ryzen", "GHX", 500, 6);
+        // Processor processor = computer.getProcessor();
 
-        System.out.println(processor.toString());
+        System.out.println(computer.toString());
     }
 
 }

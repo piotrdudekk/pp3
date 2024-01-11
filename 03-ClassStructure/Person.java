@@ -40,7 +40,7 @@ public class Person {
     }
 
     public static void main (String[] args){
-        Person p1 = new Person("Piotr", 75, 172);
+        Person p1 = new Person("Piotr", 72, 172);
         Person p2 = new Person("Eryk", 138, 180);
         Person p3 = new Person("Jakub", 71, 202);
         System.out.println(p1.displayRecord() + "\n");

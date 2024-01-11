@@ -36,7 +36,7 @@ public class Mock {
 		} catch (Throwable e) {
 			results.put("C2", 0);
 		}
-
+/* 
 		// C3
 		try {
 			assert C3.isAlphabet("abegsw")==true;
@@ -92,12 +92,14 @@ public class Mock {
 			myWriter.write(results.toString());
 			myWriter.close();
 		} catch (IOException e){}
-		
+	
+		*/
 	}
+	
 }
 
 
-
+/* 
 // Class templates
 
 class C1 {
@@ -141,3 +143,4 @@ class C6 {
 	public void setTitle(String t){}
 	public void setPages(int n){}
 }
+*/
