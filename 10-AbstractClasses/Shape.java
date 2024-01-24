@@ -1,4 +1,11 @@
+import java.lang.Math;
+
 public abstract class Shape {
+    private static final double pi = Math.PI;
+
+    public double getPi() {
+        return pi;
+    }
 
     public abstract double area();
 
@@ -16,4 +23,5 @@ public abstract class Shape {
         Circle c1 = new Circle(3);
         System.out.println("Circle 1:  r=" + c1.getR() + ", area=" + c1.area() + ", perimeter=" + c1.perimeter());
     }
+
 }

@@ -1,11 +1,11 @@
-import java.lang.Math;
+//import java.lang.Math;
 
 public class Circle extends Shape {
     private int r;
-    private double pi = Math.PI;
+    // private double pi;
 
     public double area() {
-        double ar = pi * r * r;
+        double ar = getPi() * r * r;
         if ((ar * 100) % 1 == 0) {
             return ar;
         } else if ((ar * 100) % 1 >= 0.5) {
@@ -15,7 +15,7 @@ public class Circle extends Shape {
     }
 
     public double perimeter() {
-        double per = 2 * pi * r;
+        double per = 2 * getPi() * r;
         if ((per * 100) % 1 == 0) {
             return per;
         } else if ((per * 100) % 1 >= 0.5) {
@@ -30,10 +30,6 @@ public class Circle extends Shape {
 
     public int getR() {
         return r;
-    }
-
-    public double getPi() {
-        return pi;
     }
 
 }
